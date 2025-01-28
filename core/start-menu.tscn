@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://core/start-menu.gd" type="Script" id=1]
 [ext_resource path="res://assets/music/title_s.ogg" type="AudioStream" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://assets/misc/coin.png" type="Texture" id=6]
 [ext_resource path="res://assets/misc/potion.png" type="Texture" id=7]
 [ext_resource path="res://assets/misc/chest.png" type="Texture" id=8]
+[ext_resource path="res://assets/misc/ladder.png" type="Texture" id=9]
 [ext_resource path="res://assets/splash/start-menu_bg.jpg" type="Texture" id=10]
 [ext_resource path="res://assets/splash/logo_s.png" type="Texture" id=11]
 
@@ -78,6 +79,24 @@ text = "v1.0.1"
 valign = 1
 max_lines_visible = 1
 
+[node name="ReloadedLabel" type="Label" parent="."]
+self_modulate = Color( 1, 0.913725, 0, 1 )
+light_mask = 0
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 1150.0
+margin_top = -556.0
+margin_right = 1806.0
+margin_bottom = -346.0
+rect_rotation = -7.8
+rect_scale = Vector2( 0.772, 0.772 )
+size_flags_vertical = 1
+custom_colors/font_color = Color( 1, 1, 1, 0.278431 )
+custom_fonts/font = ExtResource( 3 )
+text = "Reloaded"
+valign = 1
+max_lines_visible = 1
+
 [node name="Label0" type="Label" parent="."]
 light_mask = 0
 anchor_top = 1.0
@@ -143,3 +162,8 @@ bus = "Music"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/selected = SubResource( 1 )
+
+[node name="Ladder" type="Sprite" parent="AnimationPlayer"]
+position = Vector2( 1496, 1028 )
+scale = Vector2( 8.14062, 8.14062 )
+texture = ExtResource( 9 )

@@ -39,7 +39,7 @@ config/description="2D retro style dungeon game.
 run/main_scene="res://core/start-menu.tscn"
 boot_splash/image="res://assets/splash/logo_s.png"
 boot_splash/fullsize=false
-config/icon="res://assets/icon.png"
+config/icon="res://assets/icon3.png"
 
 [autoload]
 
