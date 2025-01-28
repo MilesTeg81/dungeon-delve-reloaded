@@ -3,7 +3,7 @@
 [ext_resource path="res://core/game-over.gd" type="Script" id=1]
 [ext_resource path="res://assets/splash/gameover_s.png" type="Texture" id=2]
 [ext_resource path="res://resources/font.tres" type="DynamicFont" id=3]
-[ext_resource path="res://assets/music/gameover.ogg" type="AudioStream" id=4]
+[ext_resource path="res://assets/music/gameover_s.ogg" type="AudioStream" id=4]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0

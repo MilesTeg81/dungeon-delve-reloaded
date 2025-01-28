@@ -6,7 +6,7 @@
 [ext_resource path="res://assets/misc/coin.png" type="Texture" id=4]
 [ext_resource path="res://core/pause-menu.gd" type="Script" id=5]
 [ext_resource path="res://assets/ui/pointer.png" type="Texture" id=6]
-[ext_resource path="res://assets/music/main.ogg" type="AudioStream" id=7]
+[ext_resource path="res://assets/music/main_s.ogg" type="AudioStream" id=7]
 [ext_resource path="res://assets/sfx/exit.wav" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFontData" id=1]
@@ -89,8 +89,8 @@ margin_bottom = 167.0
 rect_scale = Vector2( 0.4, 0.4 )
 size_flags_horizontal = 9
 theme = ExtResource( 2 )
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 2 )
 step = 1.0
 value = 35.0
 rounded = true
@@ -159,9 +159,9 @@ margin_right = 134.0
 margin_bottom = -215.0
 rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 150, 50 )
-custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.0588235, 0.713726, 0.176471, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 0.815686 )
+custom_fonts/font = ExtResource( 3 )
 text = "PAUSED"
 align = 1
 valign = 1

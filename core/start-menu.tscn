@@ -1,13 +1,13 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://core/start-menu.gd" type="Script" id=1]
+[ext_resource path="res://assets/music/title_s.ogg" type="AudioStream" id=2]
 [ext_resource path="res://resources/font.tres" type="DynamicFont" id=3]
 [ext_resource path="res://assets/ui/pointer.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/player/knight_m_idle_anim_f1.png" type="Texture" id=5]
 [ext_resource path="res://assets/misc/coin.png" type="Texture" id=6]
 [ext_resource path="res://assets/misc/potion.png" type="Texture" id=7]
 [ext_resource path="res://assets/misc/chest.png" type="Texture" id=8]
-[ext_resource path="res://assets/music/title.wav" type="AudioStream" id=9]
 [ext_resource path="res://assets/splash/start-menu_bg.jpg" type="Texture" id=10]
 [ext_resource path="res://assets/splash/logo_s.png" type="Texture" id=11]
 
@@ -134,7 +134,7 @@ scale = Vector2( 11.125, 11.125 )
 texture = ExtResource( 8 )
 
 [node name="TitleMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 9 )
+stream = ExtResource( 2 )
 volume_db = -10.4
 pitch_scale = 0.88
 autoplay = true
