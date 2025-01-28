@@ -14,7 +14,7 @@ func _ready():
 	#_velocity = Vector2(rand_range(-1.0, 1.0), rand_range(-1.0, 1.0))
 	_direction = Vector2(rand_range(-1.0, 1.0), rand_range(-1.0, 1.0)).normalized()	
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	if randf() * 100 < 15:
 		var slime = SCENE_SLIME.instance()
 		slime.position.x = position.x + 8

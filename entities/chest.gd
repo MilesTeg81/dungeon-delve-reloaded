@@ -1,6 +1,6 @@
 extends Node2D
 
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(_body):
 	globals.player.add_gold(100)
 	$Area2D.queue_free()
 	$Sprite.queue_free()

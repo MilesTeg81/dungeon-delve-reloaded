@@ -1,6 +1,6 @@
 extends Node
 
-func _on_Area2D_body_entered(body):
+func _on_Area2D_body_entered(_body):
 	globals.player.heal(10 + randi() % 10)
 	$Area2D.queue_free()
 	$Light2D.queue_free()

@@ -9,7 +9,7 @@ var _old_selected = 1
 func _ready():
 	$AnimationPlayer.play("selected")
 	
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		if _selected == OPT_START:
 			# Let the player know what is happening

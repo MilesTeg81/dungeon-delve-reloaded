@@ -14,5 +14,5 @@ func _ready():
 		$AnimationPlayer.get_animation("attack").track_set_key_value(0, 0, END_ANGLE + rot)
 
 
-func _on_AnimationPlayer_animation_finished(anim_name):
+func _on_AnimationPlayer_animation_finished(_anim_name):
 	queue_free()

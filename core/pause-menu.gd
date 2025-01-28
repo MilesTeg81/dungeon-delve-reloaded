@@ -10,7 +10,7 @@ const OPT_QUIT = 1
 var _selected = 0
 var _old_selected = 0
 	
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("screenshot") and get_tree().paused == false:
 		var date = OS.get_datetime()
 		var image = get_viewport().get_texture().get_data()

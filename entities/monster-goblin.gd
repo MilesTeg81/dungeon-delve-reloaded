@@ -12,7 +12,7 @@ func _ready():
 	$Particles2D.modulate = Color("3d734f")
 	$SfxDeath.stream = load("res://assets/sfx/death.wav")
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if _recoil_countdown <= 0:
 		# Vector to player
 		var los_ray: Vector2 = $"/root/Main/Player/CollisionShape2D".global_transform.get_origin() - $"CollisionShape2D".global_transform.get_origin()
