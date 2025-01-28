@@ -37,7 +37,6 @@ config/description="2D retro style dungeon game.
 
 // Size optimized fork of Super Dungeon Delve."
 run/main_scene="res://core/start-menu.tscn"
-boot_splash/image="res://assets/splash/boot.png"
 boot_splash/fullsize=false
 config/icon="res://assets/icon.png"
 

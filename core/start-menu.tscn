@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://core/start-menu.gd" type="Script" id=1]
-[ext_resource path="res://assets/splash/title.png" type="Texture" id=2]
 [ext_resource path="res://resources/font.tres" type="DynamicFont" id=3]
 [ext_resource path="res://assets/ui/pointer.png" type="Texture" id=4]
 [ext_resource path="res://assets/sprites/player/knight_m_idle_anim_f1.png" type="Texture" id=5]
@@ -9,6 +8,8 @@
 [ext_resource path="res://assets/misc/potion.png" type="Texture" id=7]
 [ext_resource path="res://assets/misc/chest.png" type="Texture" id=8]
 [ext_resource path="res://assets/music/title.wav" type="AudioStream" id=9]
+[ext_resource path="res://assets/splash/start-menu_bg.jpg" type="Texture" id=10]
+[ext_resource path="res://assets/splash/logo_s.png" type="Texture" id=11]
 
 [sub_resource type="Animation" id=1]
 resource_name = "selected"
@@ -45,9 +46,20 @@ script = ExtResource( 1 )
 
 [node name="background" type="Sprite" parent="."]
 position = Vector2( 0, -67 )
-scale = Vector2( 1.20669, 1.16475 )
-texture = ExtResource( 2 )
+scale = Vector2( 1.50653, 1.45417 )
+texture = ExtResource( 10 )
 centered = false
+
+[node name="logo_shadow" type="Sprite" parent="."]
+self_modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 875.997, 308.375 )
+scale = Vector2( 3.77555, 3.77555 )
+texture = ExtResource( 11 )
+
+[node name="logo" type="Sprite" parent="."]
+position = Vector2( 871.997, 304.375 )
+scale = Vector2( 3.77555, 3.77555 )
+texture = ExtResource( 11 )
 
 [node name="VersionLabel" type="Label" parent="."]
 light_mask = 0

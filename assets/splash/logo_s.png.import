@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/boot.png-5c74c48bf69d536337c10d6b1449be53.stex"
+path="res://.import/logo_s.png-9561d63d93ea4904988c249ef28b9523.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/splash/boot.png"
-dest_files=[ "res://.import/boot.png-5c74c48bf69d536337c10d6b1449be53.stex" ]
+source_file="res://assets/splash/logo_s.png"
+dest_files=[ "res://.import/logo_s.png-9561d63d93ea4904988c249ef28b9523.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
