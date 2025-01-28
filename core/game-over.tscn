@@ -54,3 +54,4 @@ valign = 1
 stream = ExtResource( 4 )
 volume_db = -12.134
 autoplay = true
+bus = "Music"

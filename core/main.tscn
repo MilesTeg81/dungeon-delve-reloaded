@@ -215,6 +215,7 @@ stream = ExtResource( 7 )
 volume_db = -11.44
 pitch_scale = 0.9
 autoplay = true
+bus = "Music"
 
 [node name="SfxExit" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
