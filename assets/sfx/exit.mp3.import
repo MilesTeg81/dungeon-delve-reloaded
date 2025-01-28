@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/exit.mp3-f402c216a89871407269ed12ef4ab653.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/exit.mp3"
+dest_files=[ "res://.import/exit.mp3-f402c216a89871407269ed12ef4ab653.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

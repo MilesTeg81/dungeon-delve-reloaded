@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/grunts.mp3-901bb742219bb681b6c7eedae2d11c97.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/grunts.mp3"
+dest_files=[ "res://.import/grunts.mp3-901bb742219bb681b6c7eedae2d11c97.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

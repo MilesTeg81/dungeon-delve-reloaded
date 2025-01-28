@@ -9,6 +9,10 @@ var _old_selected = 1
 func _ready():
 	$AnimationPlayer.play("selected")
 	
+	#external load pck
+	#$musicpack.request_completed.connect(self._http_request_completed)
+	download("https://github.com/MilesTeg81/dungeon-delve-reloaded/blob/master/web_pck/music.pck", "res://music.pck")
+	
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		if _selected == OPT_START:
@@ -46,3 +50,26 @@ func _process(_delta):
 	get_node("Label"+str(_old_selected)).modulate = Color.white
 	# We can modify the property the animation path animates on the fly, how clever!
 	ani.track_set_path(1, "Label"+str(_selected)+":modulate")				
+
+
+func download(link, path):
+	var http = HTTPRequest.new()
+	add_child(http)
+	http.connect("request_completed", self, "_http_request_completed")
+	http.set_download_file(path)
+	var request = http.request(link)
+	if request != OK:
+		push_error("Http request error")
+
+func _http_request_completed(result, _response_code, _headers, _body):
+	if result != OK:
+		push_error("Download Failed")
+	else:
+		
+		print("musicpck download finished! Importing...")
+		var success = ProjectSettings.load_resource_pack("res://music.pck")
+		if success:
+			# Now one can use the assets as if they had them in the project from the start.
+			#var imported_scene = load("res://mod_scene.tscn")
+			print("musicpck imported!")
+	#remove_child($HTTPRequest)

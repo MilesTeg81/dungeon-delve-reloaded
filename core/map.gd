@@ -69,9 +69,9 @@ func _ready():
 				var deco = Sprite.new()
 				var r: = randi() % 4
 				if r == 0: deco.texture = preload("res://assets/misc/deco/blood.png")
-				if r == 1: deco.texture = preload("res://assets/misc/deco/crack.png")
-				if r == 2: deco.texture = preload("res://assets/misc/deco/skull.png")
-				if r == 3: deco.texture = preload("res://assets/misc/deco/bones.png")
+				elif r == 1: deco.texture = preload("res://assets/misc/deco/crack.png")
+				elif r == 2: deco.texture = preload("res://assets/misc/deco/skull.png")
+				elif r == 3: deco.texture = preload("res://assets/misc/deco/bones.png")
 				if randf() > 0.5: deco.flip_h = true
 				var m_cell = get_random_floor_cell(room["left"], room["top"], room["width"], room["height"])
 				deco.position.x = m_cell.x * globals.GRID_SIZE + 8

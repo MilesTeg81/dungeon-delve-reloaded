@@ -38,11 +38,11 @@ func start_level():
 	if globals.depth > 1:
 		var r = randi() % 8
 		if r == 0: globals.map.self_modulate = Color(1.0, 1.8, 1.0)
-		if r == 1: globals.map.self_modulate = Color(1.6, 1.0, 1.0)
-		if r == 2: globals.map.self_modulate = Color(1.0, 1.0, 1.9)
-		if r == 3: globals.map.self_modulate = Color(1.8, 1.5, 1.0)
-		if r == 4: globals.map.self_modulate = Color(1.0, 1.8, 1.6)
-		if r == 5: globals.map.self_modulate = Color(1.5, 1.0, 1.5)
+		elif r == 1: globals.map.self_modulate = Color(1.6, 1.0, 1.0)
+		elif r == 2: globals.map.self_modulate = Color(1.0, 1.0, 1.9)
+		elif r == 3: globals.map.self_modulate = Color(1.8, 1.5, 1.0)
+		elif r == 4: globals.map.self_modulate = Color(1.0, 1.8, 1.6)
+		elif r == 5: globals.map.self_modulate = Color(1.5, 1.0, 1.5)
 		
 	# Add map to Main node
 	add_child(globals.map)

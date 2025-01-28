@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/smack.mp3-165345a2cae1857cf703eab6e6cc5111.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/smack.mp3"
+dest_files=[ "res://.import/smack.mp3-165345a2cae1857cf703eab6e6cc5111.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

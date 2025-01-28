@@ -79,6 +79,22 @@ text = "v1.0.1"
 valign = 1
 max_lines_visible = 1
 
+[node name="info_label" type="Label" parent="."]
+light_mask = 0
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 170.0
+margin_top = -75.0
+margin_right = 1028.0
+margin_bottom = 50.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_vertical = 1
+custom_colors/font_color = Color( 1, 1, 1, 0.278431 )
+custom_fonts/font = ExtResource( 3 )
+text = " info label"
+valign = 1
+max_lines_visible = 1
+
 [node name="ReloadedLabel" type="Label" parent="."]
 self_modulate = Color( 1, 0.913725, 0, 1 )
 light_mask = 0

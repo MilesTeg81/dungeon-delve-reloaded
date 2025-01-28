@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bones.mp3-9813f10a4a3d9293fa9d2b2ed68256cb.mp3str"
+
+[deps]
+
+source_file="res://assets/sfx/bones.mp3"
+dest_files=[ "res://.import/bones.mp3-9813f10a4a3d9293fa9d2b2ed68256cb.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
