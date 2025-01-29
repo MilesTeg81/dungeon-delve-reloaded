@@ -5,7 +5,7 @@ const SCENE_SLIME = preload("res://entities/slime.tscn")
 func _ready():
 	$AnimatedSprite.animation = "slime"
 	$Particles2D.modulate = Color("97da3f")
-	$SfxDeath.stream = load("res://assets/sfx/squish.wav")
+	$SfxDeath.stream = load("res://assets/sfx/squish.mp3")
 	
 	health = 15
 	gold = 10

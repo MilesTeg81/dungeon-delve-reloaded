@@ -2,7 +2,7 @@
 
 [ext_resource path="res://entities/chest.gd" type="Script" id=1]
 [ext_resource path="res://assets/misc/chest.png" type="Texture" id=2]
-[ext_resource path="res://assets/sfx/coins.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/sfx/coins.mp3" type="AudioStream" id=3]
 [ext_resource path="res://assets/efx/4x4.png" type="Texture" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -83,5 +83,6 @@ speed_scale = 2.0
 randomness = 0.31
 process_material = SubResource( 5 )
 texture = ExtResource( 4 )
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="finished" from="Sfx" to="." method="_on_Sfx_finished"]

@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/misc/potion.png" type="Texture" id=2]
 [ext_resource path="res://assets/efx/light-sm.png" type="Texture" id=3]
 [ext_resource path="res://assets/efx/4x4.png" type="Texture" id=4]
-[ext_resource path="res://assets/sfx/heal.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/sfx/heal.mp3" type="AudioStream" id=5]
 
 [sub_resource type="Animation" id=1]
 resource_name = "glow"
@@ -94,5 +94,6 @@ shape = SubResource( 5 )
 stream = ExtResource( 5 )
 volume_db = -11.44
 bus = "Reverb"
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="finished" from="Sfx" to="." method="_on_Sfx_finished"]

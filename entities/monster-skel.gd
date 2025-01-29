@@ -10,7 +10,7 @@ func _ready():
 	damage = 10
 	death_sfx = "2"
 	$Particles2D.modulate = Color("fdf7ed")
-	$SfxDeath.stream = load("res://assets/sfx/bones.wav")
+	$SfxDeath.stream = load("res://assets/sfx/bones.mp3")
 
 func _physics_process(delta):
 	move_time -= delta

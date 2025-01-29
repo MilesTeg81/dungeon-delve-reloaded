@@ -10,7 +10,7 @@ func _ready():
 	speed = 20.0 + randf() * 30.0
 	_base_speed = speed
 	$Particles2D.modulate = Color("3d734f")
-	$SfxDeath.stream = load("res://assets/sfx/death.wav")
+	$SfxDeath.stream = load("res://assets/sfx/death.mp3")
 
 func _physics_process(_delta):
 	if _recoil_countdown <= 0:

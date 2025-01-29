@@ -121,7 +121,7 @@ func _on_Sprite_frame_changed():
 	_step = not _step
 	if not _step: return
 	if $Sprite.animation == "walk":
-		$SfxFootstep.volume_db = rng.randf_range(-20.0, -10.0)
+		$SfxFootstep.volume_db = rng.randf_range(-17.0, -7.0)
 		$SfxFootstep.pitch_scale = rng.randf_range(0.7, 1.3)
 		$SfxFootstep.play(0.0)
 

@@ -7,7 +7,7 @@
 [ext_resource path="res://core/pause-menu.gd" type="Script" id=5]
 [ext_resource path="res://assets/ui/pointer.png" type="Texture" id=6]
 [ext_resource path="res://assets/music/main_s.ogg" type="AudioStream" id=7]
-[ext_resource path="res://assets/sfx/exit.wav" type="AudioStream" id=8]
+[ext_resource path="res://assets/sfx/exit.mp3" type="AudioStream" id=8]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://assets/fonts/LifeCraft_Font.ttf"
