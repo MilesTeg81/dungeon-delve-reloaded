@@ -10,7 +10,7 @@
 [ext_resource path="res://assets/sprites/player/knight_m_run_anim_f1.png" type="Texture" id=8]
 [ext_resource path="res://assets/sprites/player/knight_m_run_anim_f2.png" type="Texture" id=9]
 [ext_resource path="res://assets/sprites/player/knight_m_run_anim_f3.png" type="Texture" id=10]
-[ext_resource path="res://assets/efx/light.png" type="Texture" id=11]
+[ext_resource path="res://assets/efx/light3.png" type="Texture" id=11]
 [ext_resource path="res://assets/sfx/footstep.mp3" type="AudioStream" id=12]
 [ext_resource path="res://assets/sfx/grunts.mp3" type="AudioStream" id=13]
 [ext_resource path="res://assets/sfx/swipe.mp3" type="AudioStream" id=14]
@@ -70,6 +70,7 @@ drag_margin_bottom = 0.1
 [node name="Light2D" type="Light2D" parent="."]
 light_mask = 0
 position = Vector2( 8, 16 )
+scale = Vector2( 3, 3 )
 texture = ExtResource( 11 )
 texture_scale = 0.2
 color = Color( 0.960784, 0.933333, 0.270588, 1 )

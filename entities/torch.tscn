@@ -5,9 +5,7 @@
 [ext_resource path="res://assets/misc/deco/torch_2.png" type="Texture" id=3]
 [ext_resource path="res://assets/misc/deco/torch_3.png" type="Texture" id=4]
 [ext_resource path="res://assets/misc/deco/torch_4.png" type="Texture" id=5]
-[ext_resource path="res://assets/efx/light.png" type="Texture" id=6]
-
-
+[ext_resource path="res://assets/efx/light3.png" type="Texture" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -24,12 +22,12 @@ script = ExtResource( 1 )
 light_mask = 0
 position = Vector2( 8, 8 )
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [node name="Light2D" type="Light2D" parent="."]
 light_mask = 0
 position = Vector2( 8, 19 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 6 )
 texture_scale = 0.08
 color = Color( 0.968627, 0.890196, 0.52549, 1 )
