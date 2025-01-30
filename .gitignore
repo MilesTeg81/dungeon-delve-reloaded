@@ -3,5 +3,8 @@
 export.cfg
 export_presets.cfg
 bin/
-export/
-_assetsrc
+_export/
+_etc/
+_assetsrc/
+-docs/
+_web_pck
