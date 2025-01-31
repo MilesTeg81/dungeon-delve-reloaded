@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/darkness3.png-3a1f28593840d6ee16a4fc5fbb967177.stex"
+path="res://.import/light2.png-6e72c5e73ad1c5c111ceea0fc94285bd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/efx/darkness3.png"
-dest_files=[ "res://.import/darkness3.png-3a1f28593840d6ee16a4fc5fbb967177.stex" ]
+source_file="res://assets/efx/light2.png"
+dest_files=[ "res://.import/light2.png-6e72c5e73ad1c5c111ceea0fc94285bd.stex" ]
 
 [params]
 

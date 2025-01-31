@@ -96,7 +96,7 @@ valign = 1
 max_lines_visible = 1
 
 [node name="ReloadedLabel" type="Label" parent="."]
-modulate = Color( 0.992157, 0.815686, 0.0156863, 1 )
+self_modulate = Color( 1, 0.913725, 0, 1 )
 light_mask = 0
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -107,7 +107,7 @@ margin_bottom = -346.0
 rect_rotation = -7.8
 rect_scale = Vector2( 0.772, 0.772 )
 size_flags_vertical = 1
-custom_colors/font_color = Color( 1, 0.937255, 0, 0.576471 )
+custom_colors/font_color = Color( 1, 1, 1, 0.278431 )
 custom_fonts/font = ExtResource( 3 )
 text = "Reloaded"
 valign = 1
