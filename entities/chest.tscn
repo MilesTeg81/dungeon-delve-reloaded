@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://entities/chest.gd" type="Script" id=1]
 [ext_resource path="res://assets/misc/chest.png" type="Texture" id=2]
 [ext_resource path="res://assets/sfx/coins.mp3" type="AudioStream" id=3]
 [ext_resource path="res://assets/efx/4x4.png" type="Texture" id=4]
+[ext_resource path="res://assets/efx/light-sm.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6, 5 )
@@ -45,10 +46,18 @@ color_ramp = SubResource( 4 )
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-light_mask = 0
-position = Vector2( 8, 8 )
+position = Vector2( -8, 12 )
 z_index = 1
 texture = ExtResource( 2 )
+offset = Vector2( 16, -4 )
+
+[node name="shadow" type="Sprite" parent="Sprite"]
+self_modulate = Color( 0, 0, 0, 1 )
+show_behind_parent = true
+light_mask = 0
+position = Vector2( 16, 1 )
+scale = Vector2( 0.375, 0.125 )
+texture = ExtResource( 5 )
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0

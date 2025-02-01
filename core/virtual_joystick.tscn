@@ -3,11 +3,17 @@
 [ext_resource path="res://addons/joystick/virtual_joystick.tscn" type="PackedScene" id=2]
 [ext_resource path="res://addons/joystick/textures/joystick_tip.png" type="Texture" id=4]
 
-[node name="Node" type="Node"]
+[node name="virtual_joystick" type="Node"]
 
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Virtual joystick" parent="UI" instance=ExtResource( 2 )]
+modulate = Color( 1, 1, 1, 0.117647 )
+margin_left = 112.0
+margin_top = -478.0
+margin_right = 312.0
+margin_bottom = -278.0
+rect_scale = Vector2( 2, 2 )
 
 [node name="Virtual joystick2" parent="UI" instance=ExtResource( 2 )]
 anchor_left = 1.0
@@ -16,7 +22,8 @@ margin_left = -250.0
 margin_right = -50.0
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="UI"]
+modulate = Color( 1, 1, 1, 0.113725 )
 position = Vector2( 1553, 350 )
-scale = Vector2( 1.76, 1.76 )
+scale = Vector2( 2, 2 )
 normal = ExtResource( 4 )
 action = "ui_accept"

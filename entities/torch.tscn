@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://entities/torch.gd" type="Script" id=1]
 [ext_resource path="res://assets/misc/deco/torch_1.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/misc/deco/torch_3.png" type="Texture" id=4]
 [ext_resource path="res://assets/misc/deco/torch_4.png" type="Texture" id=5]
 [ext_resource path="res://assets/efx/light3.png" type="Texture" id=6]
+[ext_resource path="res://assets/efx/light-sm.png" type="Texture" id=7]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -18,6 +19,13 @@ animations = [ {
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 
+[node name="shadow" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+light_mask = 0
+position = Vector2( 8.62501, 11.3125 )
+scale = Vector2( 0.230468, 0.197266 )
+texture = ExtResource( 7 )
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 light_mask = 0
 position = Vector2( 8, 8 )
@@ -25,6 +33,7 @@ frames = SubResource( 1 )
 playing = true
 
 [node name="Light2D" type="Light2D" parent="."]
+visible = false
 light_mask = 0
 position = Vector2( 8, 19 )
 scale = Vector2( 2, 2 )
@@ -34,5 +43,16 @@ color = Color( 0.968627, 0.890196, 0.52549, 1 )
 energy = 1.4
 range_z_min = 0
 range_z_max = 9
-shadow_enabled = true
 shadow_buffer_size = 256
+
+[node name="Sprite2" type="Sprite" parent="."]
+modulate = Color( 0.870588, 0.847059, 0.639216, 0.160784 )
+position = Vector2( 8, 16 )
+scale = Vector2( 0.496094, 0.369141 )
+texture = ExtResource( 7 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+modulate = Color( 0.882353, 0.847059, 0.54902, 0.0941176 )
+position = Vector2( 9, 19 )
+scale = Vector2( 0.826172, 0.55957 )
+texture = ExtResource( 7 )

@@ -4,6 +4,7 @@
 [ext_resource path="res://core/map.gd" type="Script" id=2]
 
 [node name="Map" type="TileMap"]
+self_modulate = Color( 0.372549, 0.372549, 0.372549, 1 )
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 16, 16 )
 collision_use_kinematic = true
@@ -12,3 +13,7 @@ collision_bounce = 0.8
 collision_mask = 0
 format = 1
 script = ExtResource( 2 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+show_behind_parent = true
+color = Color( 0.509804, 0.509804, 0.509804, 1 )

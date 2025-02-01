@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://core/game-over.gd" type="Script" id=1]
 [ext_resource path="res://assets/splash/gameover_s.png" type="Texture" id=2]
 [ext_resource path="res://resources/font.tres" type="DynamicFont" id=3]
 [ext_resource path="res://assets/music/empty_audio.ogg" type="AudioStream" id=4]
+[ext_resource path="res://core/virtual_joystick.tscn" type="PackedScene" id=5]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -55,3 +56,5 @@ stream = ExtResource( 4 )
 volume_db = -2.521
 autoplay = true
 bus = "Music"
+
+[node name="virtual_joystick" parent="." instance=ExtResource( 5 )]

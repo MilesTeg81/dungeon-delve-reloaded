@@ -35,7 +35,8 @@ func _ready():
 	rng.randomize()
 	var zoom_factor = OS.get_screen_dpi(OS.get_current_screen()) / 480.0
 	#print("zoom_factor: ", zoom_factor)
-	$Camera2D.zoom = Vector2(zoom_factor, zoom_factor)
+	# we use a static zoom level
+	#$Camera2D.zoom = Vector2(zoom_factor, zoom_factor)
 		
 #
 #
@@ -135,7 +136,7 @@ func _on_Sprite_frame_changed():
 		$SfxFootstep.pitch_scale = rng.randf_range(0.7, 1.3)
 		$SfxFootstep.play(0.0)
 
-#
+#get_tree()
 #
 #
 func _on_LightTimer_timeout():

@@ -217,6 +217,7 @@ margin_left = 29.0
 margin_top = 104.0
 margin_right = 102.0
 margin_bottom = 126.0
+rect_scale = Vector2( 3, 3 )
 text = "fps"
 script = ExtResource( 10 )
 
