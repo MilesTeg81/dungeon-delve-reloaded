@@ -5,3 +5,9 @@ export_presets.cfg
 bin/
 export/
 _assetsrc
+_docs/
+_etc/
+_export/
+_web_pck/
+etc/
+web_pck/
