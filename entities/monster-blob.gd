@@ -7,16 +7,16 @@ func _ready():
 	$AnimatedSprite.animation = "blob"
 	health = 18
 	gold = 20
-	speed = 20.0 + randf() * 30.0
+	speed = 15.0 + randf() * 30.0
 	_base_speed = speed
-	$Particles2D.modulate = Color("3d734f")
-	$SfxDeath.stream = load("res://assets/sfx/death.mp3")
+	$Particles2D.modulate = Color("97da3f")
+	$SfxDeath.stream = load("res://assets/sfx/squish.mp3")
 
 func _physics_process(_delta):
 	if _recoil_countdown <= 0:
 		# Vector to player
 		var los_ray: Vector2 = $"/root/Main/Player/CollisionShape2D".global_transform.get_origin() - $"CollisionShape2D".global_transform.get_origin()
-		if los_ray.length() < 200:
+		if los_ray.length() < 50:
 			$RayCast2D.cast_to = los_ray
 			# If ray collides means no LOS, so stand still
 			if $RayCast2D.is_colliding():

@@ -37,6 +37,5 @@ position = Vector2( 8, 10 )
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 3 )
 color = Color( 0.666667, 0.12549, 0.839216, 1 )
-mode = 2
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

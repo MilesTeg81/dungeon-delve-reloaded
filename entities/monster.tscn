@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://entities/monster.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/monsters/orc_warrior_run_anim_f0.png" type="Texture" id=2]
@@ -15,13 +15,43 @@
 [ext_resource path="res://assets/efx/4x4.png" type="Texture" id=13]
 [ext_resource path="res://assets/sfx/smack.mp3" type="AudioStream" id=14]
 [ext_resource path="res://assets/efx/light-sm.png" type="Texture" id=15]
+[ext_resource path="res://assets/sprites/monsters/slime_run_spritesheeet.png" type="Texture" id=16]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 5.0
 height = 4.0
 
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 16 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 16 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 16 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 16 )
+region = Rect2( 48, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 16 )
+region = Rect2( 64, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 16 )
+region = Rect2( 80, 0, 16, 16 )
+
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
+"frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "blob",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "goblin",
@@ -100,11 +130,13 @@ self_modulate = Color( 0.305882, 0.305882, 0.305882, 1 )
 position = Vector2( 8, 8 )
 z_index = 3
 frames = SubResource( 2 )
-animation = "goblin"
+animation = "blob"
 playing = true
+offset = Vector2( 0, 2 )
 
 [node name="shadow" type="Sprite" parent="AnimatedSprite"]
 self_modulate = Color( 0.101961, 0.101961, 0.101961, 1 )
+show_behind_parent = true
 light_mask = 0
 position = Vector2( 1, 9 )
 scale = Vector2( 0.264648, 0.0576172 )

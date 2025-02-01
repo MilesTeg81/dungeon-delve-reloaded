@@ -36,13 +36,13 @@ func start_level():
 	
 	# Random colors for deeper dungeons, adds variety 
 	if globals.depth > 1:
-		var r = randi() % 8
-		if r == 0: globals.map.self_modulate = Color(1.0, 1.8, 1.0)
-		elif r == 1: globals.map.self_modulate = Color(1.6, 1.0, 1.0)
-		elif r == 2: globals.map.self_modulate = Color(1.0, 1.0, 1.9)
-		elif r == 3: globals.map.self_modulate = Color(1.8, 1.5, 1.0)
-		elif r == 4: globals.map.self_modulate = Color(1.0, 1.8, 1.6)
-		elif r == 5: globals.map.self_modulate = Color(1.5, 1.0, 1.5)
+		var r = randi() % 6
+		if r == 0: globals.map.self_modulate = Color(1.1, 1.8, 1.1)
+		elif r == 1: globals.map.self_modulate = Color(1.6, 1.1, 1.1)
+		elif r == 2: globals.map.self_modulate = Color(1.1, 1.1, 1.9)
+		elif r == 3: globals.map.self_modulate = Color(1.8, 1.5, 1.1)
+		elif r == 4: globals.map.self_modulate = Color(1.1, 1.8, 1.6)
+		elif r == 5: globals.map.self_modulate = Color(1.5, 1.1, 1.5)
 		
 	# Add map to Main node
 	add_child(globals.map)
@@ -83,16 +83,19 @@ func start_level():
 				
 				# Randomly pick a monster, note we instance the same scene for all monsters
 				# But attach different scripts for the different behaviors 
-				var r: = randi() % 3
+				var r: = randi() % 4
 				if r == 0:
 					monster = SCENE_MONSTER.instance()
 					monster.set_script(preload("res://entities/monster-skel.gd"))
-				if r == 1: 
+				elif r == 1: 
 					monster = SCENE_MONSTER.instance()
 					monster.set_script(preload("res://entities/monster-slime.gd"))
-				if r == 2:
+				elif r == 2:
 					monster = SCENE_MONSTER.instance()
 					monster.set_script(preload("res://entities/monster-goblin.gd"))
+				elif r == 3:
+					monster = SCENE_MONSTER.instance()
+					monster.set_script(preload("res://entities/monster-blob.gd"))
 				
 				# Place monster randomly in room
 				var m_cell = globals.map.get_random_floor_cell(room["left"], room["top"], room["width"], room["height"])
