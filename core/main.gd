@@ -46,6 +46,7 @@ func start_level():
 		
 	# Add map to Main node
 	add_child(globals.map)
+	
 	$HUD/DepthLabel.text = str(globals.depth * 100) + " ft"
 	
 	# Remove existing monsters (if any)

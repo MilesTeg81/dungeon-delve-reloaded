@@ -19,6 +19,16 @@ export var health = 100
 export var attack_cooldown_time = 0.5
 export var weapon_damage = 10.0
 
+# joystick code
+export (NodePath) var joystickLeftPath
+onready var joystickLeft : VirtualJoystick = get_node(joystickLeftPath)
+
+export var speed : float = 100
+
+export (NodePath) var joystickRightPath
+onready var joystickRight : VirtualJoystick = get_node(joystickRightPath)
+# /joystick code
+
 const SCENE_WEAPON: = preload("res://entities/weapon.tscn")
 
 func _ready():
@@ -31,6 +41,7 @@ func _ready():
 #
 #
 func _physics_process(delta: float):
+
 	if Input.is_action_just_pressed("test"):
 		pass
 		#globals.depth = 1
@@ -65,16 +76,15 @@ func _physics_process(delta: float):
 	$Light2D.energy = light_brightness + (cos(_time * 2) * 0.2)
 
 	# Attack
-	if Input.is_action_pressed("attack") and _attack_cooldown <= 0.001:
+	if Input.is_action_pressed("ui_accept") and _attack_cooldown <= 0.001:
 		_attack()
-		
 #
 #
 #
 func _get_direction() -> Vector2:
 	var new_dir: = Vector2(
-		Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
-		Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
+		Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"),
+		Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
 	)
 	
 	if new_dir.x != 0 or new_dir.y != 0:
