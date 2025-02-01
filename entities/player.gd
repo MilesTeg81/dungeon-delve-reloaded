@@ -155,6 +155,7 @@ func take_damage(collision_dir: Vector2, damage: float, factor: float):
 	_recoil_time = 0.2
 
 	$Sprite.play("hit")
+	$Sprite/AnimationPlayer.play("blink")
 	$"/root/Main/HUD/HealthBar".value = health	
 	$"/root/Main/HUD/HealthBar/AnimationPlayer".play("blink")
 
