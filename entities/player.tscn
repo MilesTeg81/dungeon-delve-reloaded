@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://entities/player.gd" type="Script" id=1]
 [ext_resource path="res://assets/sprites/player/knight_m_idle_anim_f0.png" type="Texture" id=2]
@@ -16,6 +16,15 @@
 [ext_resource path="res://assets/sfx/swipe.mp3" type="AudioStream" id=14]
 [ext_resource path="res://assets/efx/light-sm.png" type="Texture" id=15]
 [ext_resource path="res://assets/efx/darkness4.png" type="Texture" id=16]
+
+[sub_resource type="Gradient" id=6]
+offsets = PoolRealArray( 0, 0.63964 )
+colors = PoolColorArray( 1, 1, 1, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture2D" id=7]
+gradient = SubResource( 6 )
+fill = 1
+fill_from = Vector2( 0.5, 0.5 )
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -58,6 +67,7 @@ extents = Vector2( 4.85502, 7.0294 )
 
 [node name="Player" type="KinematicBody2D"]
 show_behind_parent = true
+scale = Vector2( 0.5, 0.5 )
 collision_layer = 2
 script = ExtResource( 1 )
 
@@ -75,6 +85,15 @@ drag_margin_left = 0.1
 drag_margin_top = 0.1
 drag_margin_right = 0.1
 drag_margin_bottom = 0.1
+
+[node name="Light2D2" type="Light2D" parent="."]
+light_mask = 0
+position = Vector2( 8, 16 )
+scale = Vector2( 3, 3 )
+texture = SubResource( 7 )
+color = Color( 1, 1, 1, 0.760784 )
+energy = 2.71
+range_item_cull_mask = 8
 
 [node name="Light2D" type="Light2D" parent="."]
 light_mask = 0

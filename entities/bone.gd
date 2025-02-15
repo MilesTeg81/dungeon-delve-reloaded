@@ -3,7 +3,7 @@ extends KinematicBody2D
 export var speed: float
 export var direction: Vector2
 export var damage = 5
-export var factor = 1.0
+export var factor = 0.5  # default 1
 #var _velocity: = Vector2.ZERO
 
 func _ready():

@@ -23,6 +23,7 @@ tracks/0/keys = {
 extents = Vector2( 4.58467, 1.2548 )
 
 [node name="Bone" type="KinematicBody2D" groups=["projectiles"]]
+scale = Vector2( 0.5, 0.5 )
 z_index = 20
 collision_layer = 4
 script = ExtResource( 1 )

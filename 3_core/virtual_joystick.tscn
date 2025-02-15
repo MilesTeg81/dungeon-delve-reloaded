@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/joystick/virtual_joystick.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/joystick/textures/joystick_tip.png" type="Texture" id=4]
+
+[node name="virtual_joystick" type="Node"]
+
+[node name="UI" type="CanvasLayer" parent="."]
+scale = Vector2( 0.5, 0.5 )
+transform = Transform2D( 0.5, 0, 0, 0.5, 0, 0 )
+
+[node name="Virtual joystick" parent="UI" instance=ExtResource( 2 )]
+modulate = Color( 1, 1, 1, 0.117647 )
+margin_left = 142.0
+margin_top = 14.0
+margin_right = 342.0
+margin_bottom = 214.0
+rect_scale = Vector2( 2, 2 )
+
+[node name="Virtual joystick2" parent="UI" instance=ExtResource( 2 )]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -250.0
+margin_right = -50.0
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="UI"]
+modulate = Color( 1, 1, 1, 0.113725 )
+position = Vector2( 1368, 710 )
+scale = Vector2( 2, 2 )
+normal = ExtResource( 4 )
+action = "ui_accept"
+
+[node name="TouchScreenButtonPause" type="TouchScreenButton" parent="UI"]
+modulate = Color( 1, 1, 1, 0.0784314 )
+position = Vector2( 1280, 30 )
+scale = Vector2( 1.64, 1.57 )
+normal = ExtResource( 4 )
+action = "pause"

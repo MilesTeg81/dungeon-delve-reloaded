@@ -24,7 +24,7 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://entities/player.gd"
 }, {
-"base": "Reference",
+"base": "Control",
 "class": "VirtualJoystick",
 "language": "GDScript",
 "path": "res://addons/joystick/virtual_joystick.gd"
@@ -42,27 +42,35 @@ config/name="Dungeon Delve Reloaded"
 config/description="2D retro style dungeon game.
 
 // Size optimized fork of Super Dungeon Delve."
-run/main_scene="res://core/start-menu.tscn"
-boot_splash/image="res://assets/splash/logo_s.png"
+run/main_scene="res://0_intro/intro0.tscn"
+boot_splash/image="res://2_menu/assets/logo_s.png"
 boot_splash/fullsize=false
 config/icon="res://assets/icon3.png"
+config/=false
 
 [autoload]
 
 globals="*res://lib/globals.gd"
+loadpck="*res://lib/loadpck.gd"
+Config="*res://lib/config.gd"
 
 [debug]
 
-settings/stdout/print_fps=true
+settings/fps/force_fps=120
 gdscript/warnings/unassigned_variable=false
 gdscript/warnings/unused_variable=false
 
 [display]
 
-window/size/width=1920
-window/size/height=1080
+window/size/width=960
+window/size/height=540
+window/ios/allow_high_refresh_rate=false
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[filesystem]
+
+import/fbx/use_fbx=false
 
 [input]
 
@@ -167,7 +175,6 @@ screenshot={
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
-pointing/emulate_mouse_from_touch=false
 
 [layer_names]
 
@@ -180,9 +187,16 @@ pointing/emulate_mouse_from_touch=false
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 quality/intended_usage/framebuffer_allocation=0
 quality/intended_usage/framebuffer_allocation.mobile=1
 vram_compression/import_etc=true
+quality/directional_shadow/size=2048
+quality/shadow_atlas/size=2048
+quality/shadows/filter_mode=0
+quality/reflections/texture_array_reflections=false
+quality/reflections/high_quality_ggx=false
+quality/shading/force_vertex_shading=true
 environment/default_clear_color=Color( 0, 0, 0, 1 )
 quality/depth/hdr=false
 environment/default_environment="res://resources/environment.tres"

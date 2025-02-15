@@ -1,0 +1,55 @@
+[gd_scene format=2]
+
+[node name="Control" type="Control"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="RootMarginContainer" type="MarginContainer" parent="."]
+margin_right = 720.0
+margin_bottom = 720.0
+
+[node name="FooterMarginContainer" type="MarginContainer" parent="RootMarginContainer"]
+margin_top = 706.0
+margin_right = 720.0
+margin_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="RootMarginContainer/FooterMarginContainer"]
+margin_right = 720.0
+margin_bottom = 14.0
+
+[node name="AuthorLabel" type="Label" parent="RootMarginContainer/FooterMarginContainer/HBoxContainer"]
+margin_right = 57.0
+margin_bottom = 14.0
+text = "MilesTeg"
+valign = 1
+
+[node name="PaddingMarginContainer" type="MarginContainer" parent="RootMarginContainer/FooterMarginContainer/HBoxContainer"]
+margin_left = 61.0
+margin_right = 61.0
+margin_bottom = 14.0
+
+[node name="Label" type="Label" parent="RootMarginContainer/FooterMarginContainer/HBoxContainer"]
+margin_left = 65.0
+margin_right = 92.0
+margin_bottom = 14.0
+text = "v0.0"
+align = 2
+valign = 1
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="RootMarginContainer"]
+margin_right = 720.0
+margin_bottom = 720.0
+
+[node name="CenterContainer" type="CenterContainer" parent="RootMarginContainer/AspectRatioContainer"]
+margin_right = 720.0
+margin_bottom = 720.0
+
+[node name="MainMenuMarginContainer" type="MarginContainer" parent="RootMarginContainer/AspectRatioContainer/CenterContainer"]
+margin_left = 360.0
+margin_top = 360.0
+margin_right = 360.0
+margin_bottom = 360.0

@@ -31,7 +31,7 @@ func _physics_process(delta):
 		_recoil_countdown -= delta
 		
 	#var collision: = move_and_collide(_velocity * delta * current_speed * factor)
-	_velocity = _direction * current_speed * factor
+	_velocity = _direction * current_speed * factor / 3
 	_velocity = move_and_slide(_velocity)
 	for i in get_slide_count():
 		var collision: = get_slide_collision(i)

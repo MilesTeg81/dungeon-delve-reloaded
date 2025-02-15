@@ -4,7 +4,7 @@ var _base_speed: = 0.0
 const RUN_AWAY_TIME = 0.7
 
 func _ready():
-	$AnimatedSprite.animation = "blob"
+	$AnimatedSprite.animation = "goblin"
 	health = 18
 	gold = 20
 	speed = 20.0 + randf() * 30.0

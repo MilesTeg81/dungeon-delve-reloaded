@@ -1,6 +1,7 @@
 extends Node
 class_name LevelGenZone
 
+
 # Random factor used when spliting zones
 # Percentange ammount to modulate the split offet
 const SPLIT_PERC = 30	  
@@ -23,7 +24,8 @@ func _init(l: float, t: float, w: float, h: float, d: int):
 	center = Vector2(floor(width / 2) + left, floor(height / 2) + top)
 
 
-func _ready():
+func _ready():	
+	# Splits Zone in 2 subzones OR creates room
 	if depth < globals.map.MAX_DEPTH and width > 0 and height > 0:
 		var halfW = ceil(width / 2)
 		var halfH = ceil(height / 2)
@@ -39,9 +41,13 @@ func _ready():
 		if splitHori:
 			var offset = (height / 100.0) * SPLIT_PERC
 			var splitH = rng.randi_range(halfH - offset, halfH + offset)
+			if globals.DEBUG:
+				set_name("LevelGenZoneH-Depth"+String(depth))
 			add_child(get_script().new(left, top, width, splitH, depth + 1))
 			add_child(get_script().new(left, top + splitH, width, height - splitH, depth + 1))
 		else:
+			if globals.DEBUG:
+				set_name("LevelGenZoneW-Depth"+String(depth))
 			var offset = (width / 100.0) * SPLIT_PERC
 			var splitW = rng.randi_range(halfW - offset, halfW + offset)
 			add_child(get_script().new(left, top, splitW, height, depth + 1))
@@ -51,13 +57,15 @@ func _ready():
 
 
 func _make_room():
-	var roomWidth = rng.randi_range(floor(width / 2), max(2, width - 2))
-	var roomHeight = rng.randi_range(floor(height / 2), max(2, height - 2))
-	var roomLeft = left + rng.randi_range(1, max(1, width - roomWidth - 1))
-	var roomTop = top + rng.randi_range(1, max(1, height - roomHeight - 1))
+	var roomWidth = rng.randi_range(int(floor(width / 2)), int(max(2, width - 2)))
+	var roomHeight = rng.randi_range(int(floor(height / 2)), int(max(2, height - 2)))
+	var roomLeft = left + rng.randi_range(1, int(max(1, width - roomWidth - 1)))
+	var roomTop = top + rng.randi_range(1, int(max(1, height - roomHeight - 1)))
 	#print(" New room %s: left:%s, top:%s, width:%s, height:%s" % [depth, roomX, roomY, roomWidth, roomHeight])
 	if roomWidth < 1 or roomWidth < 1:
 		return
+	if globals.DEBUG:
+		set_name("LGZ-Room")
 	globals.map.fill_cells_floor(roomLeft, roomTop, roomWidth, roomHeight)
 	globals.map.all_rooms.push_front({"left":roomLeft, "top":roomTop, "width":roomWidth, "height":roomHeight})
 
@@ -73,7 +81,6 @@ func make_corridor():
 			globals.map.fill_cells_floor(a.center.x, a.center.y, b.center.x - a.center.x, 1)
 		if a.center.y != b.center.y:
 			globals.map.fill_cells_floor(a.center.x, a.center.y, 1, b.center.y - a.center.y)
-
 		# Recurse down child zones
 		a.make_corridor()
 		b.make_corridor()
